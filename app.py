@@ -35,9 +35,13 @@ from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
 
 # ------------------------------------------------------------
 # 1. CONFIGURATION
+# ----------------------------------------------------------
+# ------------------------------------------------------------
+# 1. CONFIGURATION
 # ------------------------------------------------------------
 
-BASE_DIR = Path("/content/InsightML")
+# Uses the folder where app.py lives instead of Google Colab's /content
+BASE_DIR = Path(__file__).resolve().parent
 REPORT_DIR = BASE_DIR / "reports"
 MODEL_DIR = BASE_DIR / "models"
 
@@ -48,6 +52,7 @@ MAX_ROWS = 200_000
 MAX_COLUMNS = 100
 
 print("InsightML v2.0 loaded.")
+
 
 
 # ------------------------------------------------------------
